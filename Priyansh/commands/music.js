@@ -93,6 +93,9 @@ module.exports = {
       // 🖥 **API Call to YouTube Downloader**
       const apiUrl = `https://music-hax2.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=${mediaType}`;
       const downloadResponse = await axios.get(apiUrl);
+      
+      // Log the downloadResponse to check its content
+      console.log("Download API Response:", downloadResponse.data);
 
       if (!downloadResponse.data.file_url) {
         throw new Error("Download fail ho gaya. 😭");
