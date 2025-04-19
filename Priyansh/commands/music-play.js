@@ -97,7 +97,7 @@ module.exports = {
     const choice = parseInt(message);
     const selectedVideo = searchResultsCache[threadID][choice - 1];
     const videoUrl = `https://www.youtube.com/watch?v=${selectedVideo.videoId}`;
-    const apiUrl = `https://mirrykal.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=audio`;
+    const apiUrl = `https://music-hax2.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=audio`;
 
     delete searchResultsCache[threadID]; // Remove from cache after selection
 
